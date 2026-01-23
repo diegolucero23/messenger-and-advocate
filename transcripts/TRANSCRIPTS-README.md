@@ -1,25 +1,45 @@
-These are the transcripts for each of the newspaper issues for the "Latter Day Saints' Messenger and Advocate" newspaper, which ran from October 1844 until 1846. Topics include:
-- Brigham Young
-- the Quorum of the 12
-- Spiritual Wifery
-- Plural Wifery
-- monogamy
-- the law of the Church
-- the excommunication of Sidney Rigdon
-- the investigation into the crimes of the Quorum of the 12
-- adultery
-- secret priesthood
-- Cochranites
-- ... and many others.
+# Transcripts Documentation
 
-Each transcript is recorded in JSON structure format, with Markdown for the transcriptions with inclusion of the appropriate headers that detail the specifics of each issue, including:
-- the date published
-- the page of the transcribed words
-- the name of the publication
-- the issue number
-- the volume number
+This directory contains the transcribed newspaper issues for the *Latter Day Saints' Messenger and Advocate* (Oct 1844 – 1846).
 
-This makes these transcripts valuable not only for search purposes (Google, DuckDuckGo, etc), but also for use within more academic research AI LLM RAGs, which depen0 on the data to be structured in a way that the AI can still accurately source the snippets of text without active hallucinations.
+## 🗂 Data Organization
 
-the folder heirarchy will be something similar to this:
-`ROOT` > `transcripts` > `DATE-OF-TRANSCRIPTION-SET` > (Transcript files, organized by issue)
+The transcripts are organized by "batch date" to track OCR improvements over time.
+* **Current Batch:** `jan-5-2026`
+
+## 🧠 Topics Covered
+These documents cover a wide range of theological and historical controversies from the 1844 succession crisis, including:
+* Brigham Young and the Quorum of the 12
+* Spiritual Wifery vs. Monogamy
+* The Law of the Church
+* The excommunication of Sidney Rigdon
+* Investigations into the alleged crimes of the Twelve
+* Adultery and Secret Priesthoods
+* The Cochranites influence
+* William Smith's testimony
+
+## 💻 Technical Structure (JSON + Markdown)
+
+Unlike standard text files, these transcripts are recorded in a structured markdown embedded within **JSON format**. This design choice ensures the data is machine-readable and ready for high-level applications.
+
+### Why this format?
+1.  **Searchability:** Search engines (Google, DuckDuckGo) can easily parse structured metadata.
+2.  **AI & RAG Readiness:** Academic research increasingly relies on AI Large Language Models (LLMs). By providing structured JSON, we enable **RAG (Retrieval-Augmented Generation)** pipelines to ingest this history. This allows an AI to answer questions about the text while accurately citing the specific *Volume*, *Issue*, and *Page*, significantly reducing "hallucinations."
+
+### Data Schema
+Each transcript file contains objects with the following properties:
+
+```json
+{
+  "publication": "Latter Day Saints' Messenger and Advocate",
+  "volume": "1",
+  "issue": "1",
+  "date": "October 15, 1844",
+  "page": "1",
+  "content": "# Header\n\nThis is the markdown transcription of the text..."
+}
+```
+
+## 🔍 Verification
+
+We are currently verifying the data in the `jan-5-2026` folder. If you find discrepancies between the JSON content and the source scans, please submit an issue in the main repository.
