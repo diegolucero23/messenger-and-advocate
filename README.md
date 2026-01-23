@@ -54,7 +54,7 @@ The transcripts are not just raw text; they are structured data designed for mod
 
 * **Application**: This structure is optimized for AI RAG (Retrieval-Augmented Generation) systems, allowing LLMs to cite specific historical snippets without hallucination.
 
-See the [Transcripts README]https://github.com/diegolucero23/messenger-and-advocate/transcripts/README.md) for detailed documentation on the data schema.
+See the [Transcripts README](https://github.com/diegolucero23/messenger-and-advocate/transcripts/README.md) for detailed documentation on the data schema.
 
 ## 📝 License
 
