@@ -18,7 +18,7 @@ We are currently verifying the raw OCR against the original images.
 * **Vol 1, Issue 2:** 🔴 Not Started
 * **Vol 1, Issue 3:** 🔴 Not Started
 * ...
-* **Vol 2, Issue 1:** 🔴 Not Started
+* **Vol q, Issue 24:** 🔴 Not Started
 
 *(See the [Issues Tab] for specific pages that need help!)*
 
